@@ -7,14 +7,14 @@ import org.tms.page.CartPage;
 import org.tms.page.InventoryPage;
 import org.tms.service.LoginPageService;
 
-public class CartPageButtonsTest extends BaseTest{
+public class CartPageButtonsTest extends BaseTest {
     private InventoryPage inventoryPage;
     private LoginPageService loginPageService;
     private CartPage cartPage;
     private static int firstItem;
 
     @BeforeClass
-    public void login(){
+    public void login() {
         inventoryPage = new InventoryPage();
         loginPageService = new LoginPageService();
         cartPage = new CartPage();
@@ -25,15 +25,15 @@ public class CartPageButtonsTest extends BaseTest{
     }
 
     @Test(priority = 1)
-    public void verifyItemRemovedFromCartWhenClickingRemoveButtonTest(){
+    public void verifyItemRemovedFromCartWhenClickingRemoveButtonTest() {
         cartPage.clickRemoveButton();
         Boolean actualCartListDisplayed = cartPage.verifyTheCartListIsEmpty();
         Boolean expectedCartListDisplayed = false;
-        Assert.assertEquals( (boolean) actualCartListDisplayed, (boolean) expectedCartListDisplayed, "The cart isn't empty");
+        Assert.assertEquals((boolean) actualCartListDisplayed, (boolean) expectedCartListDisplayed, "The cart isn't empty");
     }
 
     @Test(priority = 2)
-    public void verifyTransferToInventoryPageWhenClickingContinueShoppingButtonTest(){
+    public void verifyTransferToInventoryPageWhenClickingContinueShoppingButtonTest() {
         cartPage.clickContinueShoppingButton();
         String actualTextOfInventoryPage = inventoryPage.getTextOfNameOfMainPageSection();
         String expectedPageText = "PRODUCTS";
@@ -41,4 +41,3 @@ public class CartPageButtonsTest extends BaseTest{
     }
 
 }
-
