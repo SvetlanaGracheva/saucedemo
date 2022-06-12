@@ -1,0 +1,1 @@
+{"uuid":"2f802c2b-ea83-4fde-b8d0-43604aec9ef6","name":"org.tms.test.CartPageItemInfoTest","children":["4599636a-75d5-4097-a479-e9c3848b8bdc"],"befores":[{"name":"login","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1654294396479,"stop":1654294397513}],"afters":[],"start":1654294389025,"stop":1654294403498}
